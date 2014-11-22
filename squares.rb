@@ -6,17 +6,11 @@ class Squares
 	end
 
 	def square_of_sums
-		@number_list.inject(:+)**2
+		@number_list.reduce(:+)**2
 	end
 
 	def sum_of_squares
-		squared_array = []
-		@number_list.each do |number|
-			squared_array << number ** 2
-		end
-
-		squared_array.inject(:+)
-			
+		@number_list.reduce {|sum, i| sum + i**2}
 	end
 
 	def difference
