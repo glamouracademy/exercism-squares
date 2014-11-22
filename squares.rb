@@ -1,8 +1,7 @@
 class Squares
 
 	def initialize(number)
-		@number = number
-		@number_list = (1..@number).to_a
+		@number_list = (1..number).to_a
 	end
 
 	def square_of_sums
